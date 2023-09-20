@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>New_EEEEEEEEEEEE</name>
+        <label>New EEEEEEEEEEEE</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Candidate Created</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBOdy</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <stringValue>gyaneshjha4@gmail.com</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>NewEEEE {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>NewEEEE</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>New_EEEEEEEEEEEE</targetReference>
+        </connector>
+        <object>Candidate__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>EmailBOdy</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Iam there&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>NewCandidate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;New Candidate&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>
