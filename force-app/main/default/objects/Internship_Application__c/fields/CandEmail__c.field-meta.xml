@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CandEmail__c</fullName>
+    <businessStatus>Hidden</businessStatus>
+    <defaultValue>$User.Email</defaultValue>
+    <externalId>true</externalId>
+    <label>CandEmail</label>
+    <required>false</required>
+    <securityClassification>Confidential</securityClassification>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

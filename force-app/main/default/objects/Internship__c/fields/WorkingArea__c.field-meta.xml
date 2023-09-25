@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WorkingArea__c</fullName>
+    <externalId>false</externalId>
+    <label>WorkingArea</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Chorus</fullName>
+                <default>false</default>
+                <label>Chorus</label>
+            </value>
+            <value>
+                <fullName>Freshers</fullName>
+                <default>false</default>
+                <label>Freshers</label>
+            </value>
+            <value>
+                <fullName>Lab</fullName>
+                <default>false</default>
+                <label>Lab</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Paper Publication</fullName>
+                <default>false</default>
+                <label>Paper Publication</label>
+            </value>
+            <value>
+                <fullName>Printing</fullName>
+                <default>false</default>
+                <label>Printing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

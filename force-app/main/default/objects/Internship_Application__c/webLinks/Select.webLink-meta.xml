@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Select</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Select</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/39.0/connection.js&quot;)} 
+var internshipApp = new sforce.SObject(&quot;Internship_Application__c&quot;); 
+internshipApp.Id = &quot;{!Internship_Application__c.Id}&quot;; 
+internshipApp.Status__c = &quot;Rejected&quot;; 
+
+var result = sforce.connection.update([internshipApp]); 
+if (result[0].getBoolean(&quot;success&quot;)) { 
+    window.location.reload(); // Refresh the page to reflect the updated status 
+} else { 
+    alert(&quot;Error updating the application status: &quot; + result[0].errors.message); 
+}</url>
+</WebLink>
