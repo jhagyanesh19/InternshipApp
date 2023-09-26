@@ -5,7 +5,7 @@ public class InternshipApplicationTriggerTest {
  static Profile intern = [SELECT Id FROM Profile where name='Intern' limit 1];
     
    static Date d = Date.today();
-    //creating a testUser here
+    //creating a testUser here 
     static User testUser;
     static {
         testUser = new User(
