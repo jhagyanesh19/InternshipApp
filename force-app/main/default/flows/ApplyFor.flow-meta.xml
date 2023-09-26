@@ -28,7 +28,7 @@
     <environments>Default</environments>
     <interviewLabel>ApplyFor {!$Flow.CurrentDateTime}</interviewLabel>
     <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
-    <label>ApplyFor</label>
+    <label>Apply For Internship</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -92,15 +92,15 @@
         <object>Candidate__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
-    <runInMode>DefaultMode</runInMode>
+    <runInMode>SystemModeWithSharing</runInMode>
     <screens>
         <name>Apply_for_Internship</name>
         <label>Apply for Internship</label>
         <locationX>176</locationX>
         <locationY>134</locationY>
-        <allowBack>true</allowBack>
+        <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
+        <allowPause>false</allowPause>
         <connector>
             <targetReference>Application</targetReference>
         </connector>
@@ -166,6 +166,7 @@
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
+        <nextOrFinishButtonLabel>Apply</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
@@ -176,5 +177,5 @@
             <targetReference>Apply_for_Internship</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Obsolete</status>
 </Flow>

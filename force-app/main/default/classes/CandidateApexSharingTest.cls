@@ -2,8 +2,10 @@
 public class CandidateApexSharingTest {
 
     static testMethod void testCandidateSharing() {
+        //selecting the profiles to assign the testUser, and testUser should have the rights of the intern
      Profile profiles1 = [SELECT Id FROM Profile where name='Intern' limit 1];
-        User testUser = new User(
+     //creating the testUser  
+     User testUser = new User(
             FirstName = 'Test',
             LastName = 'User',
             Username = 'gyanesh@mail.com',
@@ -16,7 +18,8 @@ public class CandidateApexSharingTest {
             EmailEncodingKey = 'UTF-8',
             LanguageLocaleKey = 'en_US');
         insert testUser;
-        System.debug(testUser.id+'"------------------------------------------"');
+       
+        //creating the testCandidate 
 
         Candidate__c testCandidate = new Candidate__c(
             Email__c = 'John@gmail.com',
@@ -24,6 +27,7 @@ public class CandidateApexSharingTest {
            );
         insert testCandidate;
       
+        //assigning the apexSharing to that candidate
           
         List<Candidate__c> queriedStudents = [SELECT Id,  Email__c FROM Candidate__c WHERE User__c = :testUser.id LIMIT 1];
         System.debug(queriedStudents);
@@ -35,7 +39,7 @@ public class CandidateApexSharingTest {
         candidateShare.RowCause = Schema.Candidate__Share.RowCause.user__c;
 
        
-        
+        //checking for the apexSharing
 
         
         List<Candidate__Share> candidateShares = [

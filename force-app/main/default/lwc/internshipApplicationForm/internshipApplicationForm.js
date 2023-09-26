@@ -19,7 +19,7 @@ import Opennings from '@salesforce/schema/Internship__c.Opennings__c';
 import RequiredSkills from '@salesforce/schema/Internship__c.RequiredSkills__c';
 
 
-//import Email from '@salesforce/schema/Account__c.Email__c';
+//importing all of the fieldds for creating the record
 
   
 export default class CreateAccountRecord extends LightningElement {

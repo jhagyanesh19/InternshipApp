@@ -8,12 +8,13 @@ export default class abcd extends LightningElement {
    
 
     @api recordId;
+    //setting the status variable to blank
     status='';
 
   
 
     handleApprove(){
-
+//if the approve button clicked then setting the status to hired
        this.status='Hired';
 
         this.template.querySelector('[data-status]').value =this.status;
@@ -32,6 +33,7 @@ export default class abcd extends LightningElement {
  
 
     handleReject(){
+        //if the approve button clicked then setting the status to Rejected
       this.status = 'Rejected';
       this.template.querySelector('[data-status]').value =this.status;
     

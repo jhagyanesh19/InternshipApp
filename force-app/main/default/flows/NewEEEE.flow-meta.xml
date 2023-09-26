@@ -9,6 +9,18 @@
         <actionType>emailSimple</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>topgdevil@gmail.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
             <name>emailSubject</name>
             <value>
                 <stringValue>Candidate Created</stringValue>
@@ -17,20 +29,17 @@
         <inputParameters>
             <name>emailBody</name>
             <value>
-                <elementReference>EmailBOdy</elementReference>
+                <stringValue>You</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
-            <name>sendRichBody</name>
+            <name>relatedRecordId</name>
             <value>
-                <booleanValue>true</booleanValue>
+                <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
             <name>recipientId</name>
-            <value>
-                <stringValue>gyaneshjha4@gmail.com</stringValue>
-            </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
         <versionSegment>1</versionSegment>
@@ -68,7 +77,7 @@
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <textTemplates>
         <name>EmailBOdy</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
@@ -79,4 +88,5 @@
         <isViewedAsPlainText>false</isViewedAsPlainText>
         <text>&lt;p&gt;New Candidate&lt;/p&gt;</text>
     </textTemplates>
+    <triggerOrder>500</triggerOrder>
 </Flow>

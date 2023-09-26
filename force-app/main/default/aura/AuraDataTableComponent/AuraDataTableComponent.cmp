@@ -10,7 +10,7 @@
                 <th>Name</th>
                 <th>Start Date</th>
                 <th>End Date</th>
-                <!-- Add other fields as needed -->
+             
             </tr>
         </thead>
         <tbody>
@@ -19,7 +19,7 @@
                     <td>{!internship.Name}</td>
                     <td>{!internship.InternshipStartDate__c}</td>
                     <td>{!internship.InternshipEndDate__c}</td>
-                    <!-- Add other fields as needed -->
+                    
                 </tr>
             </aura:iteration>
         </tbody>

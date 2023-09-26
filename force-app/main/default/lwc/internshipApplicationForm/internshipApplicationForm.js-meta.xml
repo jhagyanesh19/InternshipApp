@@ -8,7 +8,9 @@
         <!-- Define the target Lightning pages where you want to add your component -->
         
         <target>lightning__AppPage</target>
-        <target>lightning__RecordPage</target>
+      
         <target>lightning__HomePage</target>
+        <target>lightning__FlowScreen</target>
+      <target>lightning__RecordPage</target>
     </targets>
 </LightningComponentBundle>

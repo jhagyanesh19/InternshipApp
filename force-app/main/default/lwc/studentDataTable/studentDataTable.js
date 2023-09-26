@@ -13,6 +13,7 @@ export default class ObjectDetailDataTable extends LightningElement {
  
 
     @wire(getObjectDetails)
+    //getting details from the getObjectDetails method from controller class
 
     wiredObjectDetails({ error, data }) {
 
