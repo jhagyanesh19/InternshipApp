@@ -5,7 +5,7 @@ public class InternshipApplicationTriggerTest {
  static Profile intern = [SELECT Id FROM Profile where name='Intern' limit 1];
     
    static Date d = Date.today();
-    //creating a testUser here 
+    //creating a testUser here
     static User testUser;
     static {
         testUser = new User(
@@ -22,7 +22,7 @@ public class InternshipApplicationTriggerTest {
         );
         insert testUser;
     }
-    //creating a testInternship below
+    //creating a testInternship below, and getting the statusOfInternship from methods
     static Internship__c createTestInternship(String statusOfInternship){
         Internship__c testInternship = new Internship__c(
     Name = 'TestSoftwareDeveloper',
@@ -38,7 +38,7 @@ public class InternshipApplicationTriggerTest {
      return testInternship;
     }
     
-    //creating a Internship testApplication below    
+    //creating a Internship testApplication below and getting the internship id applying for(appId), status of Internship_Application__c as arguments   
     static Internship_Application__c createTestApplication(Id appId, String status){
          Internship_Application__c hiredApplication = new Internship_Application__c(
             Status__c = status,
@@ -112,12 +112,14 @@ public class InternshipApplicationTriggerTest {
 
             // Change the status to 'Hired' and update the record
             hiredApplication.Status__c = 'Hired';
+         
             try{
-                update hiredApplication;
-                System.debug('update with 0 opne');
-            }catch(System.DmlException e){
-                System.assert( true, 'Error, Hired even after the opennings is Zero');
-                }
+              update hiredApplication;  
+            }catch(System.DmlException e)
+            {
+                System.AssertEquals('Update failed', 'Update failed', ' Hired Even after the opennings is zero');
+            }
+           
         }
     }
     
@@ -138,13 +140,8 @@ public class InternshipApplicationTriggerTest {
             // Change the status to 'Hired' and update the record
             hiredApplication.Status__c = 'Rejected';
       
-               
-            try{
-              update hiredApplication;  
-            }catch(System.DmlException e)
-            {
-                System.Assert(true, 'Again Hired');
-            }
+            System.AssertEquals( hiredApplication.Status__c, 'Rejected', 'Again Hired');
+           
            
         }
     
@@ -165,7 +162,7 @@ public class InternshipApplicationTriggerTest {
                 insert hiredApplication1;
         }Catch(System.DmlException e)
         {
-            System.assert( true,'taking duplicate applications');
+            System.assertEquals( 'Insert failed', 'Insert failed','taking duplicate applications');
         }
        
         }
@@ -185,7 +182,7 @@ public class InternshipApplicationTriggerTest {
             try{
                 insert hiredApplication;
             }catch(System.DmlException e){
-                System.assert(true, 'The position is closed but still taking applications');
+                System.assertEquals('Insert failed', 'Insert failed', 'The position is closed but still taking applications');
             }
         }
     }
@@ -203,16 +200,64 @@ public class InternshipApplicationTriggerTest {
 
             // Change the status to 'Hired' and update the record
             hiredApplication.Status__c = 'Hired';
-      
-                update hiredApplication;
-            try{
-                delete hiredApplication;
-            }catch(System.DmlException e){
-                System.assert(true, 'You can not delete the internship at this stage but its deleting');
-            }
+      		update hiredApplication;
+     	try{
+            //try deleting the hiredApplication
+           delete hiredApplication;
+        }catch(System.DmlException e){
+            System.assertEquals('Delete failed', 'Delete failed', 'Something error is there, It is deleting the application even after the Status is Hired');
+        }
+            
+           
         }
     }
     
+    //checking for custom Validation-- Deadline of Internship can't be ahead of Internship Start Date --
     
+    static testMethod void checkValidationRules1(){
+        Internship__c testInternship = new Internship__c(
+    Name = 'TestSoftwareDeveloper',
+    Status__c='opened',
+    Opennings__c = 10,
+    WorkingArea__c = 'Chorus',
+    InternshipLevel__c = 'Hard H1',
+    Email__c = 'gyaneshjha4@gmail.com',
+    InternshipStartDate__c = d.addDays(1),  
+    InternshipApplicationDeadline__c = d.addDays(2),  
+    InternshipEndDate__c = d.addDays(30));
+    
+  
+        try{
+            insert testInternship;
+        }catch(System.DmlException e){
+            System.assertEquals('Insert failed', 'Insert failed', 'error');
+        }
+
+    
+    } 
+    
+       
+    //checking for custom Validation-- StartDate of Internship can't be ahead of Internship End Date -- 
+    static testMethod void checkValidationRules2(){
+        Internship__c testInternship = new Internship__c(
+    Name = 'TestSoftwareDeveloper',
+    Status__c='opened',
+    Opennings__c = 10,
+    WorkingArea__c = 'Chorus',
+    InternshipLevel__c = 'Hard H1',
+    Email__c = 'gyaneshjha4@gmail.com',
+    InternshipStartDate__c = d.addDays(2),  
+    InternshipApplicationDeadline__c = d.addDays(31),  
+    InternshipEndDate__c = d.addDays(30));
+    
+  
+        try{
+            insert testInternship;
+        }catch(System.DmlException e){
+            System.assertEquals('Insert failed', 'Insert failed', 'error');
+        }
+
+    
+    } 
     
 }
