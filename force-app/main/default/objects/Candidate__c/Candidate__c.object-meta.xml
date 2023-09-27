@@ -136,7 +136,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        
+
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Candidate_Record_Page</content>
         <formFactor>Small</formFactor>
@@ -172,3 +172,6 @@
     <sharingModel>Private</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
+
+
+
