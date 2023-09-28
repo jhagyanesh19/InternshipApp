@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Sharda Interns</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+		Data Table
+	</aura:example>
+</aura:documentation>

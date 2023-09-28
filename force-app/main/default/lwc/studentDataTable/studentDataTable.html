@@ -1,0 +1,43 @@
+<!-- objectDetailDataTable.html -->
+
+<template>
+
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_striped">
+
+        <thead>
+
+            <tr>
+
+                <th>Internship Name</th>
+                
+                <th>Status</th>
+                
+               
+
+                <!-- Add more columns as needed -->
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <template for:each={objectDetails} for:item="record">
+
+                <tr key={record.Id}>
+
+                 <!-- fetching the required data  -->
+                    <td>{record.Internship__r.Name}</td>
+                    <td>{record.Status__c}</td>
+
+                   
+
+                </tr>
+
+            </template>
+
+        </tbody>
+
+    </table>
+
+</template>

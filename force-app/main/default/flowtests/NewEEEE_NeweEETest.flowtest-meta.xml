@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>NewEEEE</flowApiName>
+    <label>NeweEETest</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;Email__c&quot;:&quot;gyaneshjha4@gmail.com&quot;,&quot;First_Name__c&quot;:&quot;Gyanesh&quot;,&quot;OwnerId&quot;:&quot;0055j000009l9qRAAQ&quot;,&quot;User__c&quot;:&quot;0055j000009m3hYAAQ&quot;,&quot;attributes&quot;:{&quot;type&quot;:{&quot;value&quot;:&quot;Candidate__c&quot;}}}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>$Record.First_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Gyanesh</stringValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>

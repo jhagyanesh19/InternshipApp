@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InternshipLevel__c</fullName>
+    <externalId>false</externalId>
+    <label>InternshipLevel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>WorkingArea__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Easy E1</fullName>
+                <default>false</default>
+                <label>Easy E1</label>
+            </value>
+            <value>
+                <fullName>Easy E2</fullName>
+                <default>false</default>
+                <label>Easy E2</label>
+            </value>
+            <value>
+                <fullName>Easy E3</fullName>
+                <default>false</default>
+                <label>Easy E3</label>
+            </value>
+            <value>
+                <fullName>Easy E4</fullName>
+                <default>false</default>
+                <label>Easy E4</label>
+            </value>
+            <value>
+                <fullName>Easy E5</fullName>
+                <default>false</default>
+                <label>Easy E5</label>
+            </value>
+            <value>
+                <fullName>Intermediate I1</fullName>
+                <default>false</default>
+                <label>Intermediate I1</label>
+            </value>
+            <value>
+                <fullName>Intermediate I2</fullName>
+                <default>false</default>
+                <label>Intermediate I2</label>
+            </value>
+            <value>
+                <fullName>Intermediate I3</fullName>
+                <default>false</default>
+                <label>Intermediate I3</label>
+            </value>
+            <value>
+                <fullName>Intermediate I4</fullName>
+                <default>false</default>
+                <label>Intermediate I4</label>
+            </value>
+            <value>
+                <fullName>Intermediate I5</fullName>
+                <default>false</default>
+                <label>Intermediate I5</label>
+            </value>
+            <value>
+                <fullName>Hard H1</fullName>
+                <default>false</default>
+                <label>Hard H1</label>
+            </value>
+            <value>
+                <fullName>Hard H2</fullName>
+                <default>false</default>
+                <label>Hard H2</label>
+            </value>
+            <value>
+                <fullName>Hard H3</fullName>
+                <default>false</default>
+                <label>Hard H3</label>
+            </value>
+            <value>
+                <fullName>Hard H4</fullName>
+                <default>false</default>
+                <label>Hard H4</label>
+            </value>
+            <value>
+                <fullName>Hard H5</fullName>
+                <default>false</default>
+                <label>Hard H5</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Chorus</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Intermediate I3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chorus</controllingFieldValue>
+            <controllingFieldValue>Lab</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Intermediate I4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chorus</controllingFieldValue>
+            <controllingFieldValue>Lab</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Intermediate I5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chorus</controllingFieldValue>
+            <controllingFieldValue>Lab</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Paper Publication</controllingFieldValue>
+            <valueName>Hard H1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chorus</controllingFieldValue>
+            <controllingFieldValue>Lab</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Paper Publication</controllingFieldValue>
+            <valueName>Hard H2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chorus</controllingFieldValue>
+            <controllingFieldValue>Lab</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Paper Publication</controllingFieldValue>
+            <valueName>Hard H3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Freshers</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Printing</controllingFieldValue>
+            <valueName>Easy E1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Freshers</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Printing</controllingFieldValue>
+            <valueName>Easy E2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Freshers</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Printing</controllingFieldValue>
+            <valueName>Easy E3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Freshers</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Easy E4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Freshers</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Easy E5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Paper Publication</controllingFieldValue>
+            <valueName>Hard H4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Intermediate I1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Intermediate I2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Paper Publication</controllingFieldValue>
+            <valueName>Hard H5</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

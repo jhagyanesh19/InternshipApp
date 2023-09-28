@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StartDateShouldBeGreaterThanEndDate</fullName>
+    <active>true</active>
+    <errorConditionFormula>InternshipStartDate__c &lt;  InternshipApplicationDeadline__c</errorConditionFormula>
+    <errorMessage>Deadline of Internship can&apos;t be ahead of Internship Start Date</errorMessage>
+</ValidationRule>

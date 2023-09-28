@@ -1,0 +1,26 @@
+<template>
+    <!--lightning record view form to display the leave application fields-->
+    <lightning-record-edit-form object-api-name="Internship_Application__c"
+                                record-id={recordId}>
+        <div class="slds-box">
+        
+            <lightning-input-field field-name="CandEmail__c" disabled> </lightning-input-field>
+             
+            <lightning-input-field field-name="Candidate__c" disabled> </lightning-input-field>
+             
+            <lightning-input-field field-name="Internship__c" disabled> </lightning-input-field>
+            <lightning-input-field field-name="Skills__c" disabled> </lightning-input-field>
+            
+            <lightning-input-field field-name="Status__c" data-status disabled></lightning-input-field> 
+           
+
+
+
+
+        </div>
+    </lightning-record-edit-form><br/>
+    <!--Approve button-->
+    <lightning-button variant="brand" type="submit"  label="Approve" title="Approve leave request" onclick={handleApprove} class="slds-m-left_x-small"></lightning-button>
+    <!--Reject button-->
+    <lightning-button variant="destructive" type="submit" label="Reject" title="Reject leave request" onclick={handleReject} class="slds-m-left_x-small"></lightning-button>
+</template>

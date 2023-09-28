@@ -1,0 +1,27 @@
+<aura:component>
+    <aura:attribute name="internships" type="List" />
+    <aura:attribute name="searchText" type="String" />
+    
+    <input type="text" placeholder="Search" aura:id="searchInput" value="{!v.searchText}" onkeyup="{!c.handleSearch}" />
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+             
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.internships}" var="internship">
+                <tr>
+                    <td>{!internship.Name}</td>
+                    <td>{!internship.InternshipStartDate__c}</td>
+                    <td>{!internship.InternshipEndDate__c}</td>
+                    
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>
