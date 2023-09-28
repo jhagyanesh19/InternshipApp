@@ -3,21 +3,29 @@ public class CandidateApexSharingTest {
 
     static testMethod void testCandidateSharing() {
         //selecting the profiles to assign the testUser, and testUser should have the rights of the intern
-     Profile profiles1 = [SELECT Id FROM Profile where name='Intern' limit 1];
+         User testUser;
+      String profileName = 'Intern';
+         String query = 'SELECT Id FROM Profile WHERE Name = :profileName LIMIT 1';
+         List<Profile> internProfiles = Database.query(query);
+         Date d = Date.today();
+
+       {
+         
      //creating the testUser  
-     User testUser = new User(
+      testUser = new User(
             FirstName = 'Test',
             LastName = 'User',
             Username = 'gyanesh@mail.com',
             Email = 'gyanesh@mail.com',
             Alias = 'tuser',
-            ProfileId = profiles1.id,
-          
+            ProfileId = internProfiles[0].id,
             TimeZoneSidKey = 'America/Los_Angeles',
             LocaleSidKey = 'en_US',
             EmailEncodingKey = 'UTF-8',
             LanguageLocaleKey = 'en_US');
         insert testUser;
+       
+    }
        
         //creating the testCandidate 
 
