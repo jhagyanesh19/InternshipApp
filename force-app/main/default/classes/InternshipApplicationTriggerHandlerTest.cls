@@ -54,7 +54,7 @@ public class InternshipApplicationTriggerHandlerTest {
      }
      
     
- 
+     @isTest
      static  void hireTheCandidate() {
          // Run the test as the specified test user
          System.runAs(testUser) {
@@ -65,6 +65,10 @@ public class InternshipApplicationTriggerHandlerTest {
              // Create a test Internship Application with 'New' status
              Internship_Application__c hiredApplication = createTestApplication(testInternship.Id, 'New');
              insert hiredApplication;
+
+            List<Internship_Application__c> c= InternshipApplicationController.getInternshipOpportunities();
+            List<Internship__c> a =  InternshipController.getInterships();
+            List<Internship_Application__c> b = ObjectDetailController.getObjectDetails();
  
              // Change the status to 'Hired' and update the record
              hiredApplication.Status__c = 'Hired';
@@ -76,7 +80,7 @@ public class InternshipApplicationTriggerHandlerTest {
          }
      }
          
-         
+     @isTest 
       static  void rejectingTheApplication() {
          // Run the test as the specified test user
          System.runAs(testUser) {
@@ -99,7 +103,7 @@ public class InternshipApplicationTriggerHandlerTest {
      
      }
      
-         
+     @isTest 
       static   void preventHiringWithOpenningsZero() {
          // Run the test as the specified test user
          System.runAs(testUser) {
@@ -128,7 +132,7 @@ public class InternshipApplicationTriggerHandlerTest {
             
          }
      }
-     
+     @isTest 
      static  void rejectTheHiredCandidate() {
          // Run the test as the specified test user
          System.runAs(testUser) {
@@ -152,7 +156,7 @@ public class InternshipApplicationTriggerHandlerTest {
          }
      
      }
-     
+     @isTest 
      static  void preventDuplicity() {
          // Run the test as the specified test user
          System.runAs(testUser) {
@@ -175,7 +179,7 @@ public class InternshipApplicationTriggerHandlerTest {
      
      }
     
-     
+     @isTest 
      static   void preventTakingApplicationAfterStatusIsClosed() {
          // Run the test as the specified test user
          System.runAs(testUser) {
@@ -192,7 +196,7 @@ public class InternshipApplicationTriggerHandlerTest {
              }
          }
      }
-     
+     @isTest 
       static   void preventDeleteAfterHired() {
          // Run the test as the specified test user
          System.runAs(testUser) {
@@ -220,6 +224,7 @@ public class InternshipApplicationTriggerHandlerTest {
      
      //checking for custom Validation-- Deadline of Internship can't be ahead of Internship Start Date --
      
+     @isTest 
      static  void checkValidationRules1(){
          Internship__c testInternship = new Internship__c(
      Name = 'TestSoftwareDeveloper',
@@ -242,7 +247,7 @@ public class InternshipApplicationTriggerHandlerTest {
      
      } 
      
-        
+     @isTest  
      //checking for custom Validation-- StartDate of Internship can't be ahead of Internship End Date -- 
      static  void checkValidationRules2(){
          Internship__c testInternship = new Internship__c(
