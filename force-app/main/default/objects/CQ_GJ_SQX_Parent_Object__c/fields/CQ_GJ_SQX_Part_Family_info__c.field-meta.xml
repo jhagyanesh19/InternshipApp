@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CQ_GJ_SQX_Part_Family_info__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>lookup to part family and stores the info of part_family</description>
+    <externalId>false</externalId>
+    <label>Part Family info</label>
+    <referenceTo>compliancequest__SQX_Part_Family__c</referenceTo>
+    <relationshipLabel>CQ GJ Parent Objects</relationshipLabel>
+    <relationshipName>CQ_GJ_Parent_Objects</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

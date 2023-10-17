@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CQ_GJ_SQX_User__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>will store the name of the account Owner and it is a lookup to user</description>
+    <externalId>false</externalId>
+    <label>User Account Owner</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>CQ_GJ_Parent_Objects</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

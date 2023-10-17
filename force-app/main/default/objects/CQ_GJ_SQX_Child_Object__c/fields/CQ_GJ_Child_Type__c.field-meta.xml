@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CQ_GJ_Child_Type__c</fullName>
+    <description>It will store the type of the child</description>
+    <externalId>false</externalId>
+    <label>Child Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brilliant</fullName>
+                <default>false</default>
+                <label>Brilliant</label>
+            </value>
+            <value>
+                <fullName>Laborious</fullName>
+                <default>false</default>
+                <label>Laborious</label>
+            </value>
+            <value>
+                <fullName>Lazy</fullName>
+                <default>false</default>
+                <label>Lazy</label>
+            </value>
+            <value>
+                <fullName>Prefer Hard Work</fullName>
+                <default>false</default>
+                <label>Prefer Hard Work</label>
+            </value>
+            <value>
+                <fullName>Prefer Smart Work</fullName>
+                <default>false</default>
+                <label>Prefer Smart Work</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
