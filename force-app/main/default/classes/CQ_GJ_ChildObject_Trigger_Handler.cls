@@ -7,7 +7,7 @@ public class CQ_GJ_ChildObject_Trigger_Handler {
             childIds.add(child.Id);
         }
         
-        // Query parent status for all child records outside of the loop
+        // Query parent status for all child records outside of the loop ok
         Map<Id, CQ_GJ_SQX_Child_Object__c> childStatusMap = new Map<Id, CQ_GJ_SQX_Child_Object__c>(
             [SELECT Id, CQ_GJ_SQX_Parent_Info__r.CQ_GJ_Parent_Query__c, CQ_GJ_SQX_Parent_Info__r.Name 
             FROM CQ_GJ_SQX_Child_Object__c 
