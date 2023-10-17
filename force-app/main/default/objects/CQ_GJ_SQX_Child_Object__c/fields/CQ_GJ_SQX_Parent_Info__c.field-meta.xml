@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CQ_GJ_SQX_Parent_Info__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>store the info about the child&apos;s parent</description>
+    <externalId>false</externalId>
+    <label>Parent Info</label>
+    <referenceTo>CQ_GJ_SQX_Parent_Object__c</referenceTo>
+    <relationshipLabel>CQ GJ Child Objects</relationshipLabel>
+    <relationshipName>CQ_GJ_Child_Objects</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

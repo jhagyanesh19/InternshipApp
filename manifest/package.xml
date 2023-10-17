@@ -1,36 +1,100 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
-        <name>ApexClass</name>
+        <members>CQ_GJ_SQX_Parent_Object__c.Closed</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.Complete</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.Submit</members>
+        <name>QuickAction</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexComponent</name>
+        <members>compliancequest__SQX_Part_Family__c</members>P
+        
+        <members>compliancequest__SQX_Part__c</members>
+        <members>CQ_GJ_SQX_Child_Object__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c</members>
+        
+        <name>CustomObject</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexPage</name>
+        <members>Standard</members>
+        <name>Profile</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTestSuite</name>
+        <members>CQ_GJ_Common_Permission_Set</members>
+        <name>PermissionSet</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
+       <members>*</members>
+      
+        <name>FlexiPage</name>
     </types>
     <types>
-        <members>*</members>
-        <name>AuraDefinitionBundle</name>
+        <members>compliancequest__CQ</members>
+        <name>CustomApplication</name>
     </types>
     <types>
-        <members>*</members>
+        <members>compliancequest__SQX_Part_Family__c.compliancequest__PMA_510_Number__c</members>
+        <members>compliancequest__SQX_Part_Family__c.compliancequest__NB_ID__c</members>
+        <members>compliancequest__SQX_Part__c.compliancequest__Part_Description__c</members>
+        <members>compliancequest__SQX_Part__c.compliancequest__Active__c</members>
+        <members>compliancequest__SQX_Part__c.compliancequest__Part_Number__c</members>
+        <members>compliancequest__SQX_Part__c.compliancequest__Part_Type__c</members>
+        <members>compliancequest__SQX_Part__c.compliancequest__Part_Risk_Level__c</members>
+        <members>compliancequest__SQX_Part__c.compliancequest__GTIN_Number__c</members>
+        <members>compliancequest__SQX_Part__c.compliancequest__SQX_SF_Product__c</members>
+        <members>compliancequest__SQX_Part__c.compliancequest__Reason_For_Change__c</members>
+        <members>compliancequest__SQX_Part__c.compliancequest__Part_Family__c</members>
+        <members>compliancequest__SQX_Part__c.compliancequest__Part_Number_and_Name__c</members>
+        <members>CQ_GJ_SQX_Child_Object__c.CQ_GJ_Date_Of_Birth__c</members>
+        <members>CQ_GJ_SQX_Child_Object__c.CQ_GJ_Title__c</members>
+        <members>CQ_GJ_SQX_Child_Object__c.CQ_GJ_Upload_Marksheet__c</members>
+        <members>CQ_GJ_SQX_Child_Object__c.CQ_GJ_Child_Type__c</members>
+        <members>CQ_GJ_SQX_Child_Object__c.CQ_GJ_SQX_User_info__c</members>
+        <members>CQ_GJ_SQX_Child_Object__c.CQ_GJ_SQX_Parent_Info__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_SQX_Account_Info__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_Upload_Certificate__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_Description__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_Initiated_Date__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_Buisness_Title__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_Working_Days__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_Parent_Query__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_SQX_User__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_Designation__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_SQX_Part_Info__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_SQX_Part_Family_info__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c.CQ_GJ_Target_Date__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>cquiCQChildGridGjChildObjectBoth</members>
+        <members>cquiCQChildGridGjChildObjectGrid</members>
+        <members>cquiCQGJGjParentObjectBoth</members>
         <name>LightningComponentBundle</name>
     </types>
     <types>
-        <members>*</members>
-        <name>StaticResource</name>
+        <members>CQ_GJ_SQX_Child_Object__c</members>
+        <members>CQ_GJ_SQX_Parent_Object__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>CQUI_GJ_Filter_Part_By_ProductFamily</members>
+        <members>CQUI_GJ_Test_ChildObject</members>
+        <members>CQUI_Gj_Test_Filter_Products</members>
+        <members>CQUI_GJ_Test_ParentObject</members>
+        <members>CQUI_GJ_Test_UpdateTargetDateFlow</members>
+        <members>CQ_GJ_ChildObject_Trigger_Handler</members>
+        <members>CQ_GJ_ParentObject_Test_TargetDate</members>
+        <members>CQ_GJ_ParentObject_Trigerhandler</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>CQ_GJ_Child_Object_Trigger</members>
+        <members>CQ_GJ_Parent_Object_Trigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>CQUI_GJ_DateSetter_AL_Flow</members>
+        <name>Flow</name>
     </types>
     <version>58.0</version>
 </Package>
