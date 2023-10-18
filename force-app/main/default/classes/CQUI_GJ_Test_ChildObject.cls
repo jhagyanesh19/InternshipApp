@@ -20,9 +20,7 @@ public class CQUI_GJ_Test_ChildObject {
         );
         insert child;
 
- 
-
-        // Try updating child when parent status is 'Draft' - should not throw error
+ // Try updating child when parent status is 'Draft' - should not throw error
         Test.startTest();
         try {
             child.Name = 'TestChildUpdated';
@@ -36,9 +34,7 @@ public class CQUI_GJ_Test_ChildObject {
         parent.CQ_GJ_Parent_Query__c = 'Completed';
         update parent;
 
- 
-
-        // Try updating child now - should throw error
+ // Try updating child now - should throw error
         Boolean errorThrown = false;
         try {
             child.Name = 'TestChildUpdated2';
@@ -50,9 +46,7 @@ public class CQUI_GJ_Test_ChildObject {
     }
     }
 
- 
-
-    @isTest
+  @isTest
     static void testHandleBeforeDelete() {
         System.runAs(createUserWithPermissionSet()){
         CQ_GJ_SQX_Parent_Object__c parent = new CQ_GJ_SQX_Parent_Object__c(
@@ -67,9 +61,7 @@ public class CQUI_GJ_Test_ChildObject {
         );
         insert child;
 
- 
-
-        // Try deleting child when parent status is 'Draft' - should not throw error
+ // Try deleting child when parent status is 'Draft' - should not throw error
         Test.startTest();
         try {
             delete child;
@@ -80,16 +72,11 @@ public class CQUI_GJ_Test_ChildObject {
 
         // Insert child again for next test
        
-
- 
-
         // Update parent status to 'Completed'
         parent.CQ_GJ_Parent_Query__c = 'Completed';
         update parent;
 
- 
-
-        // Try deleting child now - should throw error
+   // Try deleting child now - should throw error
        
         try {
             delete child;

@@ -18,11 +18,7 @@ public class CQ_GJ_ParentObject_Trigerhandler {
                                                AND CQ_GJ_Upload_Marksheet__c != null limit 1]) {
             parentToChildMap.put(child.CQ_GJ_SQX_Parent_Info__c, child);
         }
-
-        for (Id parentId : parentToChildMap.keySet()) {
-            System.debug('Parent Id is ' + parentId+'-----'+parentToChildMap.get(parentId));
-            
-        }        
+      
         for (CQ_GJ_SQX_Parent_Object__c parent : newParents) {
             //get the value ofold parent
             CQ_GJ_SQX_Parent_Object__c oldParent = oldParentsMap.get(parent.Id);
