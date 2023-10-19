@@ -217,14 +217,7 @@
         <object>compliancequest__SQX_Part__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
-    <recordTypeVisibilities>
-        <recordType>Account.Default</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <recordType>Account.compliancequest__CQ_Supplier</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
+  
     <tabSettings>
         <tab>CQ_GJ_SQX_Child_Object__c</tab>
         <visibility>Visible</visibility>
