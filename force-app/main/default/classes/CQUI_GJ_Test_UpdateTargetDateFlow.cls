@@ -47,12 +47,15 @@ private static User createUserWithPermissionSet() {
         );
 
         Test.startTest();
+
         // Execute the flow
         flow.start();
-        //stop the test
+
         Test.stopTest();
 
- // Retrieve the OutRecord variable from the flow
+ 
+
+        // Retrieve the OutRecord variable from the flow
         CQ_GJ_SQX_Parent_Object__c outRestaurant = (CQ_GJ_SQX_Parent_Object__c)flow.getVariableValue('OutRecord');
 
         // Validate the expected changes on OutRecord

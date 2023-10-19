@@ -2,12 +2,7 @@ public class CQ_GJ_ChildObject_Trigger_Handler {
     public static void preventer(List<CQ_GJ_SQX_Child_Object__c> childList){
         Set<Id> childIds = new Set<Id>();
         
-        // Collect the child record IDs
-        for (CQ_GJ_SQX_Child_Object__c child : childList) {
-            childIds.add(child.Id);
-        }
-        
-        // Query parent status for all child records outside of the loop
+   // Query parent status for all child records outside of the loop
         Map<Id, CQ_GJ_SQX_Child_Object__c> childStatusMap = new Map<Id, CQ_GJ_SQX_Child_Object__c>(
             [SELECT Id, CQ_GJ_SQX_Parent_Info__r.CQ_GJ_Parent_Query__c, CQ_GJ_SQX_Parent_Info__r.Name 
             FROM CQ_GJ_SQX_Child_Object__c 
@@ -28,10 +23,10 @@ public class CQ_GJ_ChildObject_Trigger_Handler {
                 (fetchParentStatus.CQ_GJ_SQX_Parent_Info__r.CQ_GJ_Parent_Query__c == 'Completed' || 
                  fetchParentStatus.CQ_GJ_SQX_Parent_Info__r.CQ_GJ_Parent_Query__c == 'Closed')) {
                 //throwing error
-                child.addError('Updation/Insertion of the child record at this stage is not allowed.');
+                child.addError(System.Label.CQ_GJ_Updation_Error);
             }
                 }else{
-               child.addError('You can not change your Parents');
+               child.addError(System.Label.CQ_GJ_Change_Parent_Error);
 
                 }
         }
@@ -39,9 +34,9 @@ public class CQ_GJ_ChildObject_Trigger_Handler {
     
         public static void handleBeforeDelete(List<CQ_GJ_SQX_Child_Object__c> childList) {
             for (CQ_GJ_SQX_Child_Object__c child : childList) {
-                //if status is not equals to draft then are preventing from deletion
-            if (child.CQ_GJ_SQX_Parent_Info__r.CQ_GJ_Parent_Query__c != 'Draft') {
-                child.addError('Sorry, Deletion of child is not allowed when the parent status is moved from Draft');
+                //if status is not eaquals to draft then are preventing from deletion
+                  if (child.CQ_GJ_SQX_Parent_Info__r.CQ_GJ_Parent_Query__c != 'Draft') {
+                child.addError(System.Label.CQ_GJ_Deleteion_Error);
             }
         }
    

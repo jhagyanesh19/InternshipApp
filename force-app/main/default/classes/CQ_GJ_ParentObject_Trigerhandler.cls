@@ -18,7 +18,8 @@ public class CQ_GJ_ParentObject_Trigerhandler {
                                                AND CQ_GJ_Upload_Marksheet__c != null limit 1]) {
             parentToChildMap.put(child.CQ_GJ_SQX_Parent_Info__c, child);
         }
-      
+
+              
         for (CQ_GJ_SQX_Parent_Object__c parent : newParents) {
             //get the value ofold parent
             CQ_GJ_SQX_Parent_Object__c oldParent = oldParentsMap.get(parent.Id);
@@ -33,7 +34,7 @@ public class CQ_GJ_ParentObject_Trigerhandler {
                     resultList.CQ_GJ_SQX_Parent_Info__r.CQ_GJ_Parent_Query__c='Completed';
                      parentsToUpdate.add(resultList);
                     }else{
-                       parent.CQ_GJ_Parent_Query__c.addError('Sorry, either it does not have any associated child or there is no attachment related to ' + parent.Name);
+                       parent.CQ_GJ_Parent_Query__c.addError(System.label.CQ_GJ_ChildAttachment_Error+'' + parent.Name);
                     
                     }
                 
@@ -41,13 +42,13 @@ public class CQ_GJ_ParentObject_Trigerhandler {
             
          else if (oldParent.CQ_GJ_Parent_Query__c == 'Closed') {
             //if the status is closed than restricting the upadtion
-                parent.CQ_GJ_Parent_Query__c.addError('Updation at this stage is not allowed.');
+                parent.CQ_GJ_Parent_Query__c.addError(System.label.CQ_GJ_Updation_Error);
         }else if(oldParent.CQ_GJ_Parent_Query__c == 'Completed' && (parent.CQ_GJ_Parent_Query__c == 'Draft' || parent.CQ_GJ_Parent_Query__c == 'In Progress')){
             //restricting form moving to backward status
-            parent.CQ_GJ_Parent_Query__c.addError('Sorry, Now you can update the status only to be Completed & You can not go backward stage'); 
+            parent.CQ_GJ_Parent_Query__c.addError(System.label.CQ_GJ_Updation_Error); 
         }else if (oldParent.CQ_GJ_Parent_Query__c == 'In Progress' && parent.CQ_GJ_Parent_Query__c == 'Draft'){
               //restricting form moving to backward status
-              parent.CQ_GJ_Parent_Query__c.addError('Sorry, Now you can update the status only to be Completed / closed & You can not go backward stage'); 
+              parent.CQ_GJ_Parent_Query__c.addError(System.label.CQ_GJ_Updation_Error); 
         }
             }
         
