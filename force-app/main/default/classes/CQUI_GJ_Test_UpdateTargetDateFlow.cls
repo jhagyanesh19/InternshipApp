@@ -1,38 +1,41 @@
 @isTest
 public class CQUI_GJ_Test_UpdateTargetDateFlow {
 
-private static User createUserWithPermissionSet() {
-		//frtching te permission sets
-        PermissionSet ps = [SELECT Id FROM PermissionSet WHERE Name = 'CQ_GJ_Common_Permission_Set' LIMIT 1];
-		//getting the profile
-        Profile p = [SELECT Id FROM Profile WHERE Name = 'Standard User' LIMIT 1]; 
-			//creating   new user
-        User u = new User(
-            ProfileId = p.Id,
-            Alias = 'standt',
-            Email = 'standarduser@testorg.com',
-            EmailEncodingKey = 'UTF-8',
-            LastName = 'Testing',
-            LanguageLocaleKey = 'en_US',
-            LocaleSidKey = 'en_US',
+    private static User testUser;
+    @testSetup
+    static void setupTestData() {
+        // Create a test user
+        testUser = new User(
+            ProfileId = [SELECT Id FROM Profile WHERE Name = 'Standard User'].Id,
+            LastName = 'TestUser',
+            Email = 'testuser@example.com',
+            Username = 'testuser1@example1.com',
+            Alias = 'tuser',
             TimeZoneSidKey = 'America/Los_Angeles',
-            UserName = 'standaruser@testo1rg.com'
+            LocaleSidKey = 'en_US',
+            EmailEncodingKey = 'UTF-8',
+            LanguageLocaleKey = 'en_US'
         );
-        insert u;
-
-        // Assign the permission set to the user
-        PermissionSetAssignment psa = new PermissionSetAssignment(
-            AssigneeId = u.Id,
-            PermissionSetId = ps.Id
-        );
-        insert psa;
-
-        return u;
+        // Insert the test user
+        insert testUser;
+        // Query the PermissionSet by its name
+        PermissionSet ps = [SELECT Id FROM PermissionSet WHERE Name = 'CQ_GJ_Common_Permission_Set' LIMIT 1];
+        if (ps != null) {
+            // Assign the Permission Set to the test user
+            PermissionSetAssignment psAssignment = new PermissionSetAssignment(
+                AssigneeId = testUser.Id,
+                PermissionSetId = ps.Id
+            );
+            insert psAssignment;
+        } else {
+            System.debug('PermissionSet not found. Check the name.');
+        }
     }
- 
 
     @isTest static void testAutoLaunchedFlow() {
-        System.runAs(createUserWithPermissionSet()){
+        
+         user Usertest=[select id , username from user where Username = 'testuser1@example1.com' LIMIT 1];
+        System.runAs(Usertest){
         // 1. Insert a test record without the expected updates from the Flow
         CQ_GJ_SQX_Parent_Object__c parent = new CQ_GJ_SQX_Parent_Object__c(
             Name = 'Test Flow'

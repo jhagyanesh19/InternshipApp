@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CQCQCHILDGRID_ADD_CHILD</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>Add Child</value>
+    </labels>
+    <labels>
+        <fullName>CQCQCHILDGRID_CHILDREN</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>Children</value>
+    </labels>
+    <labels>
+        <fullName>CQCQCHILDGRID_CUSTOM_LINKS</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>Custom Links</value>
+    </labels>
+    <labels>
+        <fullName>CQCQCHILDGRID_EDIT_MULTIPLE</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>Edit Multiple</value>
+    </labels>
+    <labels>
+        <fullName>CQCQCHILDGRID_EDIT_MULTIPLE_CHILD</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>Edit Multiple Child</value>
+    </labels>
+    <labels>
+        <fullName>CQCQCHILDGRID_INFORMATION</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>Information</value>
+    </labels>
+    <labels>
+        <fullName>CQCQCHILDGRID_NEW</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>New</value>
+    </labels>
+    <labels>
+        <fullName>CQCQCHILDGRID_SYSTEMINFO</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>SystemInfo</value>
+    </labels>
+    <labels>
+        <fullName>CQCQCHILDGRID_SYSTEM_INFO</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>System Info</value>
+    </labels>
+    <labels>
+        <fullName>CQCQCHILDGRID_SYSTEM_INFORMATION</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>System Information</value>
+    </labels>
+    <labels>
+        <fullName>CQCQGJ_CUSTOM_LINKS</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>Custom Links</value>
+    </labels>
+    <labels>
+        <fullName>CQCQGJ_INFORMATION</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>Information</value>
+    </labels>
+    <labels>
+        <fullName>CQCQGJ_SYSTEM_INFORMATION</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>System Information</value>
+    </labels>
+    <labels>
+        <fullName>CQSDCHILD_ALL_DATA</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>All Data</value>
+    </labels>
+    <labels>
+        <fullName>CQSDCHILD_ALL_FIELD</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>All Field</value>
+    </labels>
+    <labels>
+        <fullName>CQSDCHILD_CUSTOM_LINKS</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>Custom Links</value>
+    </labels>
+    <labels>
+        <fullName>CQSDCHILD_EDIT</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>CQSDCHILD_EDITALL</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>EditAll</value>
+    </labels>
+    <labels>
+        <fullName>CQSDCHILD_INFORMATION</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>Information</value>
+    </labels>
+    <labels>
+        <fullName>CQSDCHILD_NEW</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>New</value>
+    </labels>
+    <labels>
+        <fullName>CQSDCHILD_SYSTEM_INFORMATION</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>System Information</value>
+    </labels>
+    <labels>
+        <fullName>CQSD_AGRIGATED_DATA</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>Agrigated Data</value>
+    </labels>
+    <labels>
+        <fullName>CQSD_CUSTOM_LINKS</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>Custom Links</value>
+    </labels>
+    <labels>
+        <fullName>CQSD_EDIT_MULTIPLE</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>Edit Multiple</value>
+    </labels>
+    <labels>
+        <fullName>CQSD_INFORMATION</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>Information</value>
+    </labels>
+    <labels>
+        <fullName>CQSD_NEW</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Grid</shortDescription>
+        <value>New</value>
+    </labels>
+    <labels>
+        <fullName>CQSD_NEW_COMPONENT_CUSTOM_LINKS</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>Custom Links</value>
+    </labels>
+    <labels>
+        <fullName>CQSD_NEW_COMPONENT_INFORMATION</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>Information</value>
+    </labels>
+    <labels>
+        <fullName>CQSD_NEW_COMPONENT_SYSTEM_INFORMATION</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>System Information</value>
+    </labels>
+    <labels>
+        <fullName>CQSD_NEW_SECTION</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>New Section</value>
+    </labels>
+    <labels>
+        <fullName>CQSD_SYSTEM_INFORMATION</fullName>
+        <categories>CQ UI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQUI Form</shortDescription>
+        <value>System Information</value>
+    </labels>
+    <labels>
+        <fullName>CQ_GJ_Change_Parent_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQ GJ Change Parent Error</shortDescription>
+        <value>You can not change your Parent</value>
+    </labels>
+    <labels>
+        <fullName>CQ_GJ_ChildAttachment_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQ GJ ChildAttachment Error</shortDescription>
+        <value>Sorry, either it does not have any associated child or there is no attachment related to</value>
+    </labels>
+    <labels>
+        <fullName>CQ_GJ_Deleteion_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQ GJ Deleteion Error</shortDescription>
+        <value>Sorry, Deletion is not allowed at this stage</value>
+    </labels>
+    <labels>
+        <fullName>CQ_GJ_Updation_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQ GJ Updation Error</shortDescription>
+        <value>Sorry, Updation is not allowed at this stage</value>
+    </labels>
+</CustomLabels>

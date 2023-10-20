@@ -1,12 +1,43 @@
 @isTest
 public class CQUI_Gj_Test_Filter_Products {
 
+        private static User testUser;
+    @testSetup
+    static void setupTestData() {
+        // Create a test user
+        testUser = new User(
+            ProfileId = [SELECT Id FROM Profile WHERE Name = 'Standard User'].Id,
+            LastName = 'TestUser',
+            Email = 'testuser@example.com',
+            Username = 'testuser1@example1.com',
+            Alias = 'tuser',
+            TimeZoneSidKey = 'America/Los_Angeles',
+            LocaleSidKey = 'en_US',
+            EmailEncodingKey = 'UTF-8',
+            LanguageLocaleKey = 'en_US'
+        );
+        // Insert the test user
+        insert testUser;
+        // Query the PermissionSet by its name
+        PermissionSet ps = [SELECT Id FROM PermissionSet WHERE Name = 'CQ_GJ_Common_Permission_Set' LIMIT 1];
+        if (ps != null) {
+            // Assign the Permission Set to the test user
+            PermissionSetAssignment psAssignment = new PermissionSetAssignment(
+                AssigneeId = testUser.Id,
+                PermissionSetId = ps.Id
+            );
+            insert psAssignment;
+        } else {
+            System.debug('PermissionSet not found. Check the name.');
+        }
+    }
  
 
     @isTest
 
     static void testGetRecords() {
-
+  user Usertest=[select id , username from user where Username = 'testuser1@example1.com' LIMIT 1];
+        System.runAs(Usertest){
         // Setup Part Family test data
 
         compliancequest__SQX_Part_Family__c partFamily = new compliancequest__SQX_Part_Family__c(Name = 'TestFamily');
@@ -85,7 +116,7 @@ public class CQUI_Gj_Test_Filter_Products {
 
  
 
-       
+        }
 
     }
 
