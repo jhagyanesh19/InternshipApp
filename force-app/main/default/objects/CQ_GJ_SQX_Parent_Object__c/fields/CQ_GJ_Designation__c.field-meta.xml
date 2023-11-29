@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CQ_GJ_Designation__c</fullName>
+    <description>Will take the info of the designation of the parents</description>
+    <externalId>false</externalId>
+    <label>Designation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Businessman</fullName>
+                <default>false</default>
+                <label>Businessman</label>
+            </value>
+            <value>
+                <fullName>Corporate Worker</fullName>
+                <default>false</default>
+                <label>Corporate Worker</label>
+            </value>
+            <value>
+                <fullName>Daily Worker</fullName>
+                <default>false</default>
+                <label>Daily Worker</label>
+            </value>
+            <value>
+                <fullName>Government Officer</fullName>
+                <default>false</default>
+                <label>Government Officer</label>
+            </value>
+            <value>
+                <fullName>Self Employed</fullName>
+                <default>false</default>
+                <label>Self Employed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>compliancequest__PartFamilyNameShouldBeUnique</fullName>
+    <active>true</active>
+    <description>Each part family name should be unique.
+Error message will be issued when a user tries to create a part family with duplicate part family name.</description>
+    <errorConditionFormula>NOT($Permission.compliancequest__SQXDataMigrationCustomPermission) &amp;&amp; UPPER(VLOOKUP( $ObjectType.compliancequest__SQX_Part_Family__c.Fields.Name,         $ObjectType.compliancequest__SQX_Part_Family__c.Fields.Name, Name))
+=  UPPER(Name)  
+&amp;&amp;
+( ISNEW() || PRIORVALUE(Name) &lt;&gt; Name)</errorConditionFormula>
+    <errorMessage>This Part Family Name is already present in the System.</errorMessage>
+</ValidationRule>

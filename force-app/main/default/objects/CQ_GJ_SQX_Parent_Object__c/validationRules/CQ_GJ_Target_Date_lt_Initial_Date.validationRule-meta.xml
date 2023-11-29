@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CQ_GJ_Target_Date_lt_Initial_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>CQ_GJ_Target_Date__c &lt;  CQ_GJ_Initiated_Date__c</errorConditionFormula>
+    <errorDisplayField>CQ_GJ_Initiated_Date__c</errorDisplayField>
+    <errorMessage>Sorry, initial date can not be ahead of target date</errorMessage>
+</ValidationRule>
